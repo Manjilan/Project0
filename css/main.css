@@ -31,7 +31,17 @@ img {
 ul {
   padding-left: 0;
 }
-
+.about-paragraphs{
+  display: flex;
+  padding: 2% 5%;
+}
+.about-paragraphs p{
+  padding: 0 5%;
+}
+#about{
+  background-color: #FAF4D7;
+  opacity: .5;
+}
 /* -----------------------------------------------------
 Typography
 -------------------------------------------------------- */
@@ -55,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+
 /* -----------------------------------------------------
 Theme
 -------------------------------------------------------- */
@@ -71,7 +82,7 @@ Theme
 header{
   padding: 400px 0;
 }
-nav, footer {
+nav{
   background-color: #E6E2D6;
   color: white;
 }
@@ -90,6 +101,12 @@ Layout
   margin: 0 auto;
   padding: 0 1rem;
 }
+#testimonials p{
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
 
 /* -----------------------------------------------------
 Header
@@ -227,6 +244,9 @@ Projects
 .carousel-indicators .active {
   background-color: #2C3E50;
   border: 2px solid #2C3E50;
+}
+#portfolio h2{
+  text-align: center;
 }
 
 /* -----------------------------------------------------
