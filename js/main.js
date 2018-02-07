@@ -186,6 +186,7 @@ function highlightNavigation() {
     });
 }
 
+// almost 1 100% percent sure!
 $(window).scroll( throttle(highlightNavigation, 100) );
 
 
