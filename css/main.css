@@ -38,6 +38,7 @@ ul {
 }
 .about-paragraphs p{
   padding: 0 5%;
+  width: 50%;
 }
 #about{
   background-color: #FAF4D7;
@@ -351,7 +352,7 @@ Footer
 -------------------------------------------------------- */
 footer {
   overflow: hidden;
-  margin: 1.5rem auto;;
+  margin: 5rem auto;;
   padding: 1rem 0;
   width: 70%;
 
@@ -389,8 +390,9 @@ button{
     font-size: 18px;
   }
 
-  .about-content {
-    column-count: 1;
+  .about-paragraphs p{
+    width: 100%;
+    flex-direction: column;
   }
 
   .nav-links {
@@ -410,18 +412,67 @@ button{
     max-height: 500px;
     transition: max-height 0.25s ease-in;
   }
+  .hamburger-icon {
+  margin: 1em auto;
+  width: 2.5rem;
+  display: block;
+  position: relative;
+  height: 30px;
+}
 
-  .nav-links a {
+.hamburger-icon:hover,
+.hamburger-icon:active,
+.hamburger-icon:focus {
+  outline: 0;
+}
+
+
+.line:nth-child(1) {
+  top: 0;
+}
+
+.line:nth-child(2) {
+  top: 12px;
+}
+
+.line:nth-child(3) {
+  top: 24px;
+}
+
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: white;
+  border-radius: 2.5rem;
+  position: absolute;
+  opacity: 1;
+  transition: all .s ease-in-out;
+
+}
+
+
+/* TOP line */
+.open-menu .line:first-child {
+  transform: translateY(12px) Rotate(135deg);
+}
+
+/* MIDDLE line */
+.open-menu .line:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-100px);
+}
+
+/* BOTTOM line */
+.open-menu .line:last-child {
+      transform: translateY(-12px) Rotate(-135deg);
+}
+
+.nav-links a {
     display: inline-block;
     align-self: flex-start;
     margin-left: 0;
     font-size: .8rem;
     padding: .25rem 0;
-  }
-
-  .mobile-nav {
-    display: inline-block;
-    margin-left: auto;
-  }
+}
 
 }

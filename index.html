@@ -13,13 +13,18 @@
   <header class="fixed-background">
     <nav>
       <div class="content-wrapper">
-      <span class="nav-links">
-      <a href="#about">About</a>
-      <a href="#portfolio">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </span>
-  </div>
+        <span class="nav-links">
+          <a href="#about">About</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </span>
+        <a href="" class="hamburger-icon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </a>
+      </div>
     </nav>
     <h1>Manjila Nakarmi</h1>
   </header>
@@ -35,12 +40,12 @@
     <section id="skills">
       <h2>Skills</h2>
       <div>
-      <i class="fab fa-html5 fa-3x"></i>
-      <i class="fab fa-css3-alt fa-3x"></i>
-      <i class="fab fa-js fa-3x"></i>
-      <i class="fas fa-code fa-3x"></i>
-      <i class="fab fa-github fa-3x"></i>
-    </div>
+        <i class="fab fa-html5 fa-3x"></i>
+        <i class="fab fa-css3-alt fa-3x"></i>
+        <i class="fab fa-js fa-3x"></i>
+        <i class="fas fa-code fa-3x"></i>
+        <i class="fab fa-github fa-3x"></i>
+      </div>
     </section>
 
     <section id="portfolio">
@@ -66,12 +71,12 @@
 
     <section id="testimonials">
       <div>
-      <h2>Testimonials</h2>
-      <!-- fade in and fade out of the testimonials -->
-      <blockquote><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Odio ut sem nulla pharetra diam. Diam in arcu cursus euismod quis. Amet volutpat consequat mauris nunc congue nisi. Eu feugiat pretium nibh ipsum consequat."</p><p>- Manjila</p></blockquote>
-      <blockquote><p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et." </p></blockquote>
-      <blockquote><p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia."</p></blockquote>
-    </div>
+        <h2>Testimonials</h2>
+        <!-- fade in and fade out of the testimonials -->
+        <blockquote><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Odio ut sem nulla pharetra diam. Diam in arcu cursus euismod quis. Amet volutpat consequat mauris nunc congue nisi. Eu feugiat pretium nibh ipsum consequat."</p><p>- Manjila</p></blockquote>
+        <blockquote><p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et." </p></blockquote>
+        <blockquote><p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia."</p></blockquote>
+      </div>
     </section>
 
   </main>
@@ -82,14 +87,14 @@
     <h2>Contact Me</h2>
     <!-- form to contact me -->
     <form>
-    <label>Name</label>
-    <input placeholder="Full Name">
-    <label>Email Address</label>
-    <input placeholder="email@address.com">
-    <label>Message</label>
-    <textarea placeholder="Please write your message here"></textarea>
-    <button type="submit">Submit</button>
-  </form>
+      <label for="fullName">Name</label>
+      <input id ="fullName" placeholder="Full Name">
+      <label for="emailAddress">Email Address</label>
+      <input id="emailAddress" placeholder="email@address.com">
+      <label for ="message">Message</label>
+      <textarea id ="message" placeholder="Please write your message here"></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </footer>
   <script src="js/main.js"></script>
 </body>

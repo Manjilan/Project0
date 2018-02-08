@@ -143,7 +143,7 @@ function highlightNavigation() {
     $sections.each(function() {
         var currentSection = $(this);
         // get the position of the section
-        var sectionTop = currentSection.offset().top - 71;
+        var sectionTop = currentSection.offset().top - 71 ;
 
         // if the user has scrolled over the top of the section
         if (scrollPosition >= sectionTop) {
@@ -163,12 +163,17 @@ function highlightNavigation() {
         }
     });
 }
+// -----------------------------
+// Navigation
+// -----------------------------
+$('input, textarea').on('click', function(){
+  $(this).css('border', '2px solid #A9A9A9');
+})
 
-// almost 1 100% percent sure!
 $(window).scroll( throttle(highlightNavigation, 100) );
 
 
-$('.hamburger').on('click', function (e) {
-  e.preventDefault();
-  $('.nav-links').toggleClass('open-menu');
+$('.hamburger-icon').on('click', function(e){
+	e.preventDefault();
+	$(this).toggleClass('open-menu');
 });
