@@ -206,6 +206,17 @@ h2 {
 #skills i{
   color: #E6E2D6;
 }
+#testimonials{
+  background-color: #E6E6FA;
+}
+#testimonials div{
+  border: 2px solid #DCDCDC;
+  padding: 2%;
+  width: 75%;
+  margin: 0 auto;
+  background-color: #DCDCDC;
+  color: white;
+}
 
 /* -----------------------------------------------------
 About
