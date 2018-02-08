@@ -196,6 +196,13 @@ section hr {
 h2 {
   text-align: center;
 }
+#skills{
+  display: flex;
+  justify-content: space-around;
+}
+#skills i{
+  color: #E6E2D6;
+}
 
 /* -----------------------------------------------------
 About
@@ -207,6 +214,9 @@ About
 
 .about-content p {
   margin-top: 0;
+}
+#skills i{
+  color: black;
 }
 
 /* -----------------------------------------------------
