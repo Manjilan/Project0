@@ -10,9 +10,10 @@ html {
 }
 
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
+  color: #696969;
 }
 
 hr {
@@ -40,7 +41,9 @@ ul {
 }
 #about{
   background-color: #FAF4D7;
-  opacity: .5;
+}
+#about, #skills, #testimonials, #contact, #portfolio h2{
+  opacity: .7;
 }
 /* -----------------------------------------------------
 Typography
@@ -60,7 +63,7 @@ a.active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -140,7 +143,7 @@ nav {
 }
 
 nav a {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -150,7 +153,7 @@ nav a {
 }
 
 .nav-links a:hover {
-  color: rgb(24, 188, 156);
+  color: #8B7583;
 }
 
 nav .content-wrapper {
@@ -158,9 +161,9 @@ nav .content-wrapper {
   flex-wrap: wrap;
 }
 
-.logo {
+/* .logo {
   font-size: 1.25rem;
-}
+} */
 
 .nav-links {
   margin-left: auto;
@@ -175,7 +178,7 @@ nav .content-wrapper {
 }
 
 .nav-links .current {
-  border-bottom: 2px solid rgb(24, 188, 156);
+  border-bottom: 2px solid #8B7583;
 }
 
 .mobile-nav {
@@ -207,15 +210,16 @@ h2 {
   color: #E6E2D6;
 }
 #testimonials{
-  background-color: #E6E6FA;
+  background-color: #E0E0E2;
 }
 #testimonials div{
-  border: 2px solid #DCDCDC;
-  padding: 2%;
+  border: 15px outset white;
+  padding: 3%;
   width: 75%;
   margin: 0 auto;
-  background-color: #DCDCDC;
+  background-color: #8B7583;
   color: white;
+  opacity: 0.7;
 }
 
 /* -----------------------------------------------------
@@ -259,10 +263,11 @@ Projects
   height: 15px;
   cursor: pointer;
   border: 2px solid #888;
-  border-radius: 50%;
-  margin: 0 5px;
+  transform: rotate(45deg);
+  margin: 0 10px;
   background-color: white;
   transition: all .3s ease-in-out;
+  border-radius: 20%;
 }
 
 .carousel-indicators .active {
@@ -346,8 +351,10 @@ Footer
 -------------------------------------------------------- */
 footer {
   overflow: hidden;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto;;
   padding: 1rem 0;
+  width: 70%;
+
 }
 
 footer .content-wrapper {
@@ -369,6 +376,11 @@ footer a {
   color: white;
   font-size: .9rem;
   margin-right: .3rem;
+}
+button{
+  width: 100%;
+  background-color: #E6E2D6;
+  color: #696969;
 }
 
 

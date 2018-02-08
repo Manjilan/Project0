@@ -56,32 +56,6 @@ function transitionSlides () {
 }
 
 
-// --------------------------
-// Lightbox -----------------
-// --------------------------
-$('.carousel').on('click', 'img', function () {
-  // Clear Timer for Carousel so that it stops switching slides
-  clearInterval(carouselTimer);
-
-  // Find out which image the user wants to view in the lightbox
-  var imageSrc = $(this).attr('src');
-
-  $('.lightbox img').attr('src', imageSrc);
-
-  // Fade in lightbox (as a flex container)
-  $('.lightbox').css('display', 'flex').hide().fadeIn(300, function () {
-    $('body').on('click', hideLightbox);
-  });
-
-});
-
-function hideLightbox () {
-  $('.lightbox').fadeOut(300, function () {
-    // After modal dissapears, remove click event on body
-    $('body').unbind('click', hideLightbox);
-  });
-}
-
 
 // --------------------------
 // Quotes on Timer ----------
@@ -90,7 +64,7 @@ var quoteCounter = 0;
 var quoteLength = $('blockquote').length;
 
 setInterval(function () {
-  $('blockquote').eq(quoteCounter).fadeOut(800, function () {
+  $('blockquote').eq(quoteCounter).fadeOut(400, function () {
     if (quoteCounter === quoteLength - 1) {
       quoteCounter = 0;
     } else {
@@ -106,19 +80,23 @@ setInterval(function () {
 // --------------------------
 
 // Do it when someone clicks a nav link
-$('.nav-links a, .logo a').on('click', function(e) {
+$('.nav-links a').on('click', function(e) {
   // prevent the standard link operation on click
   e.preventDefault();
   // use the href of the link to identify what
   // section to scroll to
-  var thisTarget = $(this).attr('href');
+  var thisTarget = this.hash;
   // get that section's top offset
   var targetOffset = $(thisTarget).offset().top;
   // use jQuery.animate() to animate the body's
   // scrollTop to the targetOffest
-  $('body').animate({
+  $('html, body').animate({
     scrollTop: targetOffset
-  }, 600);
+  }, 600, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = thisTarget;
+      });
 });
 
 

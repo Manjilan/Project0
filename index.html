@@ -12,11 +12,14 @@
 <body>
   <header class="fixed-background">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#portfolio">Projects</a>
-      <a href="index.html#testimonials">Testimonials</a>
-      <a href="index.html#contact">Contact</a>
+      <div class="content-wrapper">
+      <span class="nav-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </span>
+  </div>
     </nav>
     <h1>Manjila Nakarmi</h1>
   </header>
@@ -65,9 +68,9 @@
       <div>
       <h2>Testimonials</h2>
       <!-- fade in and fade out of the testimonials -->
-      <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Odio ut sem nulla pharetra diam. Diam in arcu cursus euismod quis. Amet volutpat consequat mauris nunc congue nisi. Eu feugiat pretium nibh ipsum consequat. </p></blockquote>
-      <blockquote><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et. </p></blockquote>
-      <blockquote><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia.</p></blockquote>
+      <blockquote><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Odio ut sem nulla pharetra diam. Diam in arcu cursus euismod quis. Amet volutpat consequat mauris nunc congue nisi. Eu feugiat pretium nibh ipsum consequat."</p><p>- Manjila</p></blockquote>
+      <blockquote><p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et." </p></blockquote>
+      <blockquote><p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia."</p></blockquote>
     </div>
     </section>
 
@@ -78,6 +81,15 @@
   <footer id="contact">
     <h2>Contact Me</h2>
     <!-- form to contact me -->
+    <form>
+    <label>Name</label>
+    <input placeholder="Full Name">
+    <label>Email Address</label>
+    <input placeholder="email@address.com">
+    <label>Message</label>
+    <textarea placeholder="Please write your message here"></textarea>
+    <button type="submit">Submit</button>
+  </form>
   </footer>
   <script src="js/main.js"></script>
 </body>
