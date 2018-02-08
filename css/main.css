@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 Theme
 -------------------------------------------------------- */
 .fixed-background {
-    background: url('../assets/aman-dhakal-205796.jpg');
+    background: url('../assets/415109.jpg');
     width: 100%;
     height: auto;
     display:block;
@@ -88,8 +88,10 @@ nav{
 }
 h1{
   color: white;
-  opacity: 0.7;
-  padding: 125px 0;
+  padding: 50px 0 200px;
+}
+#skills{
+  background-color: #E6E2D6;
 }
 
 
@@ -196,9 +198,10 @@ section hr {
 h2 {
   text-align: center;
 }
-#skills{
+#skills div{
   display: flex;
   justify-content: space-around;
+  padding: 2% 0;
 }
 #skills i{
   color: #E6E2D6;
