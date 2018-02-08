@@ -182,6 +182,7 @@ nav .content-wrapper {
   border-bottom: 2px solid #8B7583;
 }
 
+
 .mobile-nav {
   display: none;
 }
@@ -212,6 +213,7 @@ h2 {
 }
 #testimonials{
   background-color: #E0E0E2;
+  padding: 10% 0;
 }
 #testimonials div{
   border: 15px outset white;
@@ -395,16 +397,23 @@ button{
     flex-direction: column;
   }
 
+  .mobile-nav{
+    display: inline-block;
+  }
+
   .nav-links {
-    max-height: 0;
+    max-height: 300px;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
     order: 3;
-/*     display: flex; */
-    flex-direction: column;
     width: 100%;
     display: none;
     padding-top: 1rem;
+  }
+  .nav-links a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .open-menu {
@@ -412,6 +421,7 @@ button{
     max-height: 500px;
     transition: max-height 0.25s ease-in;
   }
+
   .hamburger-icon {
   margin: 1em auto;
   width: 2.5rem;
@@ -467,7 +477,7 @@ button{
       transform: translateY(-12px) Rotate(-135deg);
 }
 
-.nav-links a {
+.open-menu a{
     display: inline-block;
     align-self: flex-start;
     margin-left: 0;

@@ -176,4 +176,5 @@ $(window).scroll( throttle(highlightNavigation, 100) );
 $('.hamburger-icon').on('click', function(e){
 	e.preventDefault();
 	$(this).toggleClass('open-menu');
+  $('.nav-links').toggle();
 });
