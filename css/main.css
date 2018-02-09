@@ -377,7 +377,7 @@ Animation
 }
 .slide-in{
    transition: all 500ms linear;
-   transform: translate3d(0px, 100px, 0px);
+   transform: translate3d(0px, 200px, 0px);
 }
 .animation-items.slide-in.in-view {
    opacity: 1;

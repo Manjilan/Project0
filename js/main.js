@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+$(document).ready(function() {
 // --------------------------
 // Carousel -----------------
 // --------------------------
@@ -221,5 +221,4 @@ $('.hamburger-icon').on('click', function(e){
     })
     //trigger our scroll event on initial load
   $(window).trigger('scroll');
-
-  
+})
