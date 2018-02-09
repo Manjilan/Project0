@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Used some functions from the sample animations and codepen -->
 <html>
 <head>
   <meta charset="utf-8">
@@ -13,17 +14,19 @@
   <header class="fixed-background">
     <nav>
       <div class="content-wrapper">
+        <div class="mobile-nav">
+        <a href="" class="hamburger-icon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </a>
+        </div>
         <span class="nav-links">
           <a href="#about">About</a>
           <a href="#portfolio">Projects</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#contact">Contact</a>
         </span>
-        <a href="" class="hamburger-icon">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </a>
       </div>
     </nav>
     <h1>Manjila Nakarmi</h1>
@@ -32,14 +35,14 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <div class="about-paragraphs">
+      <div class="about-paragraphs animation-items slide-in">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <iframe src="https://giphy.com/embed/mVJ5xyiYkC3Vm" width="350" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
       </div>
     </section>
     <section id="skills">
       <h2>Skills</h2>
-      <div>
+      <div class="about-paragraphs animation-items slide-in">
         <i class="fab fa-html5 fa-3x"></i>
         <i class="fab fa-css3-alt fa-3x"></i>
         <i class="fab fa-js fa-3x"></i>
@@ -55,9 +58,9 @@
       <div class="content-wrapper">
         <div class="carousel">
           <div class="image-wrapper">
-            <img src="assets/310197.jpg" alt="">
-            <img src="assets/395556.jpg" alt="">
-            <img src="assets/498495.jpg" alt="">
+            <img src="assets/monument.png" alt="">
+            <img src="assets/geoquakes.png" alt="">
+            <img src="assets/shoppingcart.png" alt="">
           </div>
         </div>
         <ul class="carousel-indicators">
@@ -74,8 +77,8 @@
         <h2>Testimonials</h2>
         <!-- fade in and fade out of the testimonials -->
         <blockquote><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Odio ut sem nulla pharetra diam. Diam in arcu cursus euismod quis. Amet volutpat consequat mauris nunc congue nisi. Eu feugiat pretium nibh ipsum consequat."</p><p>- Manjila</p></blockquote>
-        <blockquote><p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et." </p></blockquote>
-        <blockquote><p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia."</p></blockquote>
+        <blockquote><p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ac placerat vestibulum lectus mauris ultrices eros in cursus. Dui ut ornare lectus sit amet est placerat in egestas. Aliquam id diam maecenas ultricies mi eget mauris pharetra et." </p><p>- Manjila</p></blockquote>
+        <blockquote><p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Amet massa vitae tortor condimentum lacinia."</p><p>- Manjila</p></blockquote>
       </div>
     </section>
 
@@ -83,7 +86,7 @@
 
 
 
-  <footer id="contact">
+  <section id="contact">
     <h2>Contact Me</h2>
     <!-- form to contact me -->
     <form>
@@ -95,6 +98,16 @@
       <textarea id ="message" placeholder="Please write your message here"></textarea>
       <button type="submit">Submit</button>
     </form>
+  </section>
+  <footer>
+    <h4>Connect on social media</h4>
+    <div>
+    <a href="https://www.facebook.com/DestinationManjilaHeart"><i class="fab fa-facebook-square fa-2x"></i></a>
+    <a href="https://www.instagram.com/prettyandclumsy/"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.linkedin.com/in/manjilanakarmi/"><i class="fab fa-linkedin fa-2x"></i></a>
+    <a href="https://github.com/Manjilan"><i class="fab fa-github fa-2x"></i></a>
+  </div>
+  <h4><a href="funpage.html">Click for something fun</a></h4>
   </footer>
   <script src="js/main.js"></script>
 </body>

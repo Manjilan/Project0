@@ -16,15 +16,6 @@ body {
   color: #696969;
 }
 
-hr {
-  padding: 0;
-  border: none;
-  border-top: solid 5px;
-  text-align: center;
-  max-width: 250px;
-  margin: 25px auto 30px;
-}
-
 img {
   max-width: 100%;
 }
@@ -34,7 +25,8 @@ ul {
 }
 .about-paragraphs{
   display: flex;
-  padding: 2% 5%;
+  padding: 2% 2%;
+  justify-content: space-around;
 }
 .about-paragraphs p{
   padding: 0 5%;
@@ -153,7 +145,7 @@ nav a {
   padding: 0 2%;
 }
 
-.nav-links a:hover {
+a:hover {
   color: #8B7583;
 }
 
@@ -182,6 +174,7 @@ nav .content-wrapper {
   border-bottom: 2px solid #8B7583;
 }
 
+
 .mobile-nav {
   display: none;
 }
@@ -209,18 +202,6 @@ h2 {
 }
 #skills i{
   color: #E6E2D6;
-}
-#testimonials{
-  background-color: #E0E0E2;
-}
-#testimonials div{
-  border: 15px outset white;
-  padding: 3%;
-  width: 75%;
-  margin: 0 auto;
-  background-color: #8B7583;
-  color: white;
-  opacity: 0.7;
 }
 
 /* -----------------------------------------------------
@@ -279,24 +260,6 @@ Projects
   text-align: center;
 }
 
-/* -----------------------------------------------------
-Lightbox
--------------------------------------------------------- */
-.lightbox {
-  background: rgba(0, 0, 0, .5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
-  justify-content: center;
-  align-content: center;
-}
-
-.lightbox img {
-  align-self: center;
-}
 
 /* -----------------------------------------------------
 Testimonials
@@ -309,6 +272,19 @@ blockquote {
 
 blockquote:first-of-type {
   display: block;
+}
+#testimonials{
+  background-color: #E0E0E2;
+  padding: 10% 0;
+}
+#testimonials div{
+  border: 20px outset white;
+  padding: 2.5%;
+  width: 75%;
+  margin: 0 auto;
+  background-color: #8B7583;
+  color: #E6E2D6;
+  opacity: 0.7;
 }
 
 /* -----------------------------------------------------
@@ -347,44 +323,70 @@ button {
   font-weight: 700;
 }
 
+#contact{
+    width: 70%;
+}
+
 /* -----------------------------------------------------
 Footer
 -------------------------------------------------------- */
-footer {
+footer{
   overflow: hidden;
-  margin: 5rem auto;;
-  padding: 1rem 0;
-  width: 70%;
-
+  margin: 3rem auto 0;
+  padding: 1rem 0 ;
+  background-color: #E6E2D6;
+  color: #696969;
+  opacity: 0.7;
 }
 
-footer .content-wrapper {
+footer h4{
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 2%;
+  border-bottom: 2px solid;
+}
+
+footer div{
+  width: 50%;
   display: flex;
-}
-
-footer p {
-  font-size: .75rem;
-  display: inline-block;
-  margin: .25rem 0 0 0;
-}
-
-footer span {
-  margin: 0 0 0 auto;
-  display: inline-block;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 footer a {
-  color: white;
   font-size: .9rem;
   margin-right: .3rem;
+  color: #696969;
 }
+
 button{
   width: 100%;
   background-color: #E6E2D6;
   color: #696969;
 }
-
-
+h4{
+  text-align: center;
+  text-transform: capitalize;
+}
+/* -----------------------------------------------------
+Animation
+-------------------------------------------------------- */
+.animation-items{
+  opacity: 0;
+  position: relative;
+}
+.slide-in{
+   transition: all 500ms linear;
+   transform: translate3d(0px, 200px, 0px);
+}
+.animation-items.slide-in.in-view {
+   opacity: 1;
+   transform: translate3d(0px, 0px, 0px);
+}
+}
+/* -----------------------------------------------------
+Media Queries
+-------------------------------------------------------- */
 @media only screen and (max-width: 700px) {
   html {
     font-size: 18px;
@@ -395,16 +397,23 @@ button{
     flex-direction: column;
   }
 
+  .mobile-nav{
+    display: block;
+  }
+
   .nav-links {
-    max-height: 0;
+    max-height: 300px;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
     order: 3;
-/*     display: flex; */
-    flex-direction: column;
     width: 100%;
     display: none;
     padding-top: 1rem;
+  }
+  .nav-links a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .open-menu {
@@ -412,6 +421,7 @@ button{
     max-height: 500px;
     transition: max-height 0.25s ease-in;
   }
+
   .hamburger-icon {
   margin: 1em auto;
   width: 2.5rem;
@@ -467,12 +477,14 @@ button{
       transform: translateY(-12px) Rotate(-135deg);
 }
 
-.nav-links a {
+.open-menu a{
     display: inline-block;
     align-self: flex-start;
     margin-left: 0;
     font-size: .8rem;
     padding: .25rem 0;
 }
-
+footer div{
+  width: 80%;
+}
 }

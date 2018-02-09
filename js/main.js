@@ -1,3 +1,4 @@
+
 // --------------------------
 // Carousel -----------------
 // --------------------------
@@ -176,4 +177,47 @@ $(window).scroll( throttle(highlightNavigation, 100) );
 $('.hamburger-icon').on('click', function(e){
 	e.preventDefault();
 	$(this).toggleClass('open-menu');
+  $('.nav-links').toggle();
 });
+
+// -----------------------------
+// Animations
+// -----------------------------
+
+  //window and animation items
+  var animationElements = $('.animation-items');
+  var webWindow = $(window);
+
+  //check to see if any animation containers are currently in view
+  function checkInView() {
+    //get current window information
+    var windowHeight = webWindow.height();
+    var windowTop = webWindow.scrollTop();
+    var windowBottom = (windowTop + windowHeight);
+
+    //iterate through elements to see if its in view
+    $.each(animationElements, function() {
+
+      //get the element's information
+      var element = $(this);
+      var elementHeight = $(element).outerHeight();
+      var elementTop = $(element).offset().top;
+      var elementBottom = (elementTop+ elementHeight);
+
+      //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+      if ((elementBottom >= windowTop) && (elementTop <= windowBottom)) {
+        element.addClass('in-view');
+      } else {
+        element.removeClass('in-view');
+      }
+    });
+
+  }
+
+
+  //on or scroll, detect elements in view
+  $(window).on('scroll resize', function() {
+      checkInView()
+    })
+    //trigger our scroll event on initial load
+  $(window).trigger('scroll');
