@@ -1,0 +1,11 @@
+h1{
+  text-align: center;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+main div{
+  padding: 2%;
+}

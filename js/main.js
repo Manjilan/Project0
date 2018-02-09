@@ -1,3 +1,4 @@
+  $(document).ready(function() {
 // --------------------------
 // Carousel -----------------
 // --------------------------
@@ -213,9 +214,12 @@ $('.hamburger-icon').on('click', function(e){
 
   }
 
+
   //on or scroll, detect elements in view
   $(window).on('scroll resize', function() {
       checkInView()
     })
     //trigger our scroll event on initial load
   $(window).trigger('scroll');
+
+  
