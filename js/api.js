@@ -7,38 +7,45 @@ var marvel_endpoint = "http://gateway.marvel.com/v1/public/characters?ts=1&apike
   console.log("Let's get coding!");
   // CODE IN HERE!
 
+
+
   //Marvel
-  $.ajax({
-    method: "GET",
-    url: marvel_endpoint,
-    data: {
-        limit: 20,
-        offset: offset
-    },
-    success: function(response){
-      $(response.data.results).each(function(){
-        $("main").append(`<div><p>${this.name}</p><img src="${this.thumbnail.path}/standard_fantastic.jpg"></div>`);
-      })
-    },
-      error: function(response){
-        console.log('Dang it!');
-      },
-
-    })
-
-$(window).on('scroll', function(e) {
-      offset += 20;
-      $.ajax({
-        method: "GET",
-        url: marvel_endpoint,
-        data: {
-            limit: 20,
-            offset: offset
-        },
-        success: function(response){
-          $(response.data.results).each(function(){
-            $("main").append(`<div><p>${this.name}</p><img src="${this.thumbnail.path}/standard_fantastic.jpg"></div>`);
-          })
-        }
-
-      })  })
+//   $.ajax({
+//     method: "GET",
+//     url: marvel_endpoint,
+//     data: {
+//         limit: 20,
+//         offset: offset
+//     },
+//     success: function(response){
+//       $(response.data.results).each(function(){
+//         $("main").append(`<div><p>${this.name}</p><img src="${this.thumbnail.path}/standard_fantastic.jpg"></div>`);
+//        $(".front").append(`<img src="${this.thumbnail.path}/standard_fantastic.jpg">`);
+//        $(".back").append(`<p>${this.name}<br>${this.description}</p>`);
+//        })
+//     },
+//       error: function(response){
+//         console.log('Dang it!');
+//       },
+//
+//     })
+//
+// $(window).on('scroll', function(e) {
+//       offset += 20;
+//       $.ajax({
+//         method: "GET",
+//         url: marvel_endpoint,
+//         data: {
+//             limit: 20,
+//             offset: offset
+//         },
+//         success: function(response){
+//           $(response.data.results).each(function(){
+//             $("main").append(`<div><p>${this.name}</p><img src="${this.thumbnail.path}/standard_fantastic.jpg"></div>`);
+//           })
+//         }
+//
+//       })  })
+$(".card").on("click", function(){
+  $(this).toggleClass("flip");
+})

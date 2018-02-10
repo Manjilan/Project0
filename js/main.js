@@ -174,11 +174,19 @@ $('input, textarea').on('click', function(){
 $(window).scroll( throttle(highlightNavigation, 100) );
 
 
-$('.hamburger-icon').on('click', function(e){
+$('.mobile-nav').on('click', function(e){
 	e.preventDefault();
 	$(this).toggleClass('open-menu');
   $('.nav-links').toggle();
 });
+// $(window).on('resize', function(e){
+//   e.preventDefault();
+//   if ($(window).width()>=700){
+//     $('.mobile-nav').hide();
+//   } else{
+//       $('.mobile-nav').show();
+//   }
+// })
 
 // -----------------------------
 // Animations
@@ -217,7 +225,7 @@ $('.hamburger-icon').on('click', function(e){
 
   //on or scroll, detect elements in view
   $(window).on('scroll resize', function() {
-      checkInView()
+      checkInView();
     })
     //trigger our scroll event on initial load
   $(window).trigger('scroll');

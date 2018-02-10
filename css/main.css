@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   color: #696969;
@@ -56,7 +56,7 @@ a.active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Comfortaa", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -175,9 +175,6 @@ nav .content-wrapper {
 }
 
 
-.mobile-nav {
-  display: none;
-}
 
 /* -----------------------------------------------------
 Sections
@@ -387,33 +384,33 @@ Animation
 /* -----------------------------------------------------
 Media Queries
 -------------------------------------------------------- */
-@media only screen and (max-width: 700px) {
+@media (max-width: 860px){
   html {
     font-size: 18px;
   }
 
   .about-paragraphs p{
     width: 100%;
-    flex-direction: column;
   }
 
   .mobile-nav{
-    display: block;
+    display: inline-block;
   }
 
-  .nav-links {
+  .nav-links{
     max-height: 300px;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
     order: 3;
     width: 100%;
-    display: none;
     padding-top: 1rem;
+    display: none;
   }
   .nav-links a{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    display: none;
   }
 
   .open-menu {
@@ -422,12 +419,13 @@ Media Queries
     transition: max-height 0.25s ease-in;
   }
 
-  .hamburger-icon {
+.hamburger-icon {
   margin: 1em auto;
   width: 2.5rem;
   display: block;
   position: relative;
   height: 30px;
+  z-index: 100;
 }
 
 .hamburger-icon:hover,

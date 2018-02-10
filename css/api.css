@@ -1,21 +1,62 @@
 body{
   font-family: Comfortaa;
   font-size: 16px;
+  background-color: #696969;
 }
 
 h1{
   text-align: center;
-  font-family: Quicksand;
+  font-family: "Noto Sans";
   padding: 3% 0;
+  color: white;
+  background: red;
+  text-transform: uppercase;
 }
 main{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   color: #808080;
 }
 main div{
   padding: 2%;
+  width: 100%;
+}
+
+img{
+  width: 300px;
+}
+.card{
+  background-color: grey;
+  width: 25%;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+  perspective: 700px;
+ display: flex;
+ justify-content: space-evenly;
+}
+.front, .back {
+  position: absolute;
+  top:0;
+  left:0;
+  backface-visibility: hidden;
+  width: 300px;
+  height: 300px;
+}
+.back {
+  transform:rotateY(180deg);
+}
+.flip{
+   transform:rotateY(180deg);
+
+}
+
+p{
+  color: white;
+}
+.card p{
+  background-color: grey;
+
 }
