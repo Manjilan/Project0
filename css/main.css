@@ -16,7 +16,11 @@ body {
   color: #696969;
 }
 
+<<<<<<< HEAD
 .image-wrapper img{
+=======
+img {
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
   max-width: 100%;
 }
 
@@ -170,9 +174,15 @@ nav .content-wrapper {
 .nav-links .current {
   border-bottom: 2px solid #8B7583;
 }
+<<<<<<< HEAD
 .hamburger-icon {
   margin: 1em auto;
   width: 2.5rem;
+=======
+
+
+.mobile-nav {
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
   display: none;
   position: relative;
   height: 30px;
@@ -308,6 +318,10 @@ Projects
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
 /* -----------------------------------------------------
 Testimonials
 -------------------------------------------------------- */
@@ -373,6 +387,7 @@ button {
 #contact{
     width: 70%;
 }
+<<<<<<< HEAD
 textarea:hover{
   border: 2px solid #A9A9A9;
 }
@@ -382,6 +397,8 @@ input:hover{
 .error{
     border: 2px solid red;
 }
+=======
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
 
 /* -----------------------------------------------------
 Footer
@@ -443,7 +460,11 @@ Animation
 /* -----------------------------------------------------
 Media Queries
 -------------------------------------------------------- */
+<<<<<<< HEAD
 @media (max-width: 860px){
+=======
+@media only screen and (max-width: 700px) {
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
   html {
     font-size: 18px;
   }
@@ -452,7 +473,15 @@ Media Queries
     width: 100%;
   }
 
+<<<<<<< HEAD
   .nav-links{
+=======
+  .mobile-nav{
+    display: inline-block;
+  }
+
+  .nav-links {
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
     max-height: 300px;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
@@ -470,12 +499,75 @@ Media Queries
     padding: 10px;
     display: none;
   }
+  .nav-links a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
 
   .open-menu {
     display: flex;
     max-height: 500px;
     transition: max-height 0.25s ease-in;
   }
+<<<<<<< HEAD
+=======
+
+  .hamburger-icon {
+  margin: 1em auto;
+  width: 2.5rem;
+  display: block;
+  position: relative;
+  height: 30px;
+}
+
+.hamburger-icon:hover,
+.hamburger-icon:active,
+.hamburger-icon:focus {
+  outline: 0;
+}
+
+
+.line:nth-child(1) {
+  top: 0;
+}
+
+.line:nth-child(2) {
+  top: 12px;
+}
+
+.line:nth-child(3) {
+  top: 24px;
+}
+
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: white;
+  border-radius: 2.5rem;
+  position: absolute;
+  opacity: 1;
+  transition: all .s ease-in-out;
+
+}
+
+
+/* TOP line */
+.open-menu .line:first-child {
+  transform: translateY(12px) Rotate(135deg);
+}
+
+/* MIDDLE line */
+.open-menu .line:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-100px);
+}
+
+/* BOTTOM line */
+.open-menu .line:last-child {
+      transform: translateY(-12px) Rotate(-135deg);
+}
+>>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
 
 .open-menu a{
     display: inline-block;
