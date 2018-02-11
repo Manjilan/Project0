@@ -4,7 +4,7 @@
 // define globals
 $(document).ready(function(){
 var offset = 0;
-var marvel_endpoint = "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=f7237d2d6b84524fee8eba2943790ea6&hash=d8358291a51527982a889a850adab3ac";
+var marvel_endpoint = "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=f7237d2d6b84524fee8eba2943790ea6&hash=d8358291a51527982a889a850adab3ac";
   console.log("Let's get coding!");
   // CODE IN HERE!
 
