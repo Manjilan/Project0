@@ -237,6 +237,6 @@ $('form').on('submit', function(e){
     if($(this).val()===""){
       $(this).attr('placeholder', 'Invalid Input');
       $(this).addClass("error");
-    }
+    } 
   })
 })
