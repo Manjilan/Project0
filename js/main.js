@@ -10,7 +10,7 @@ var numberImages = $('.carousel img').length;
 
 // Set the width of the image wrapper and each image accordingly (responsive, baby!)
 $('.image-wrapper').css('width', numberImages * 100 + '%');
-$('.image-wrapper img').css('width', 100 / numberImages + '%');
+$('.image-wrapper a').css('width', 100 / numberImages + '%');
 
 // Set up a timer for the carousel
 var carouselTimer = setInterval(timerTransition, 4000);
@@ -95,9 +95,9 @@ $('.nav-links a').on('click', function(e) {
     scrollTop: targetOffset
   }, 600, function(){
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = thisTarget;
-      });
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = thisTarget;
+  });
 });
 
 
@@ -112,71 +112,69 @@ var $sections = $($("section, header").get().reverse());
 // map each section id to their corresponding navigation link
 var sectionIdTonavigationLink = {};
 $sections.each(function() {
-    var id = $(this).attr('id');
-    sectionIdTonavigationLink[id] = $('.nav-links a[href="#' + id + '"]');
+  var id = $(this).attr('id');
+  sectionIdTonavigationLink[id] = $('.nav-links a[href="#' + id + '"]');
 });
 
 // throttle function, enforces a minimum time interval
 function throttle(fn, interval) {
-    var lastCall, timeoutId;
-    return function () {
-        var now = new Date().getTime();
-        if (lastCall && now < (lastCall + interval) ) {
-            // if we are inside the interval we wait
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(function () {
-                lastCall = now;
-                fn.call();
-            }, interval - (now - lastCall) );
-        } else {
-            // otherwise, we directly call the function
-            lastCall = now;
-            fn.call();
-        }
-    };
+  var lastCall, timeoutId;
+  return function () {
+    var now = new Date().getTime();
+    if (lastCall && now < (lastCall + interval) ) {
+      // if we are inside the interval we wait
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(function () {
+        lastCall = now;
+        fn.call();
+      }, interval - (now - lastCall) );
+    } else {
+      // otherwise, we directly call the function
+      lastCall = now;
+      fn.call();
+    }
+  };
 }
 
 function highlightNavigation() {
-    // get the current vertical position of the scroll bar
-    var scrollPosition = $(window).scrollTop();
+  // get the current vertical position of the scroll bar
+  var scrollPosition = $(window).scrollTop();
 
-    // iterate the sections
-    $sections.each(function() {
-        var currentSection = $(this);
-        // get the position of the section
-        var sectionTop = currentSection.offset().top - 71 ;
+  // iterate the sections
+  $sections.each(function() {
+    var currentSection = $(this);
+    // get the position of the section
+    var sectionTop = currentSection.offset().top - 71 ;
 
-        // if the user has scrolled over the top of the section
-        if (scrollPosition >= sectionTop) {
-            // get the section id
-            var id = currentSection.attr('id');
-            // get the corresponding navigation link
-            var $navigationLink = sectionIdTonavigationLink[id];
-            // if the link is not current
-            if (!$navigationLink.hasClass('current')) {
-                // remove .current class from all the links
-                $navigationLinks.removeClass('current');
-                // add .current class to the current link
-                $navigationLink.addClass('current');
-            }
-            // we have found our section, so we return false to exit the each loop
-            return false;
-        }
-    });
+    // if the user has scrolled over the top of the section
+    if (scrollPosition >= sectionTop) {
+      // get the section id
+      var id = currentSection.attr('id');
+      // get the corresponding navigation link
+      var $navigationLink = sectionIdTonavigationLink[id];
+      // if the link is not current
+      if (!$navigationLink.hasClass('current')) {
+        // remove .current class from all the links
+        $navigationLinks.removeClass('current');
+        // add .current class to the current link
+        $navigationLink.addClass('current');
+      }
+      // we have found our section, so we return false to exit the each loop
+      return false;
+    }
+  });
 }
 // -----------------------------
 // Navigation
 // -----------------------------
-$('input, textarea').on('click', function(){
-  $(this).css('border', '2px solid #A9A9A9');
-})
+
 
 $(window).scroll( throttle(highlightNavigation, 100) );
 
 
-$('.mobile-nav').on('click', function(e){
-	e.preventDefault();
-	$(this).toggleClass('open-menu');
+$('.hamburger-icon').on('click', function(e){
+  e.preventDefault();
+  $(this).toggleClass('open-menu');
   $('.nav-links').toggle();
 });
 // $(window).on('resize', function(e){
@@ -192,40 +190,53 @@ $('.mobile-nav').on('click', function(e){
 // Animations
 // -----------------------------
 
-  //window and animation items
-  var animationElements = $('.animation-items');
-  var webWindow = $(window);
+//window and animation items
+var animationElements = $('.animation-items');
+var webWindow = $(window);
 
-  //check to see if any animation containers are currently in view
-  function checkInView() {
-    //get current window information
-    var windowHeight = webWindow.height();
-    var windowTop = webWindow.scrollTop();
-    var windowBottom = (windowTop + windowHeight);
+//check to see if any animation containers are currently in view
+function checkInView() {
+  //get current window information
+  var windowHeight = webWindow.height();
+  var windowTop = webWindow.scrollTop();
+  var windowBottom = (windowTop + windowHeight);
 
-    //iterate through elements to see if its in view
-    $.each(animationElements, function() {
+  //iterate through elements to see if its in view
+  $.each(animationElements, function() {
 
-      //get the element's information
-      var element = $(this);
-      var elementHeight = $(element).outerHeight();
-      var elementTop = $(element).offset().top;
-      var elementBottom = (elementTop+ elementHeight);
+    //get the element's information
+    var element = $(this);
+    var elementHeight = $(element).outerHeight();
+    var elementTop = $(element).offset().top;
+    var elementBottom = (elementTop+ elementHeight);
 
-      //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
-      if ((elementBottom >= windowTop) && (elementTop <= windowBottom)) {
-        element.addClass('in-view');
-      } else {
-        element.removeClass('in-view');
-      }
-    });
+    //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+    if ((elementBottom >= windowTop) && (elementTop <= windowBottom)) {
+      element.addClass('in-view');
+    } else {
+      element.removeClass('in-view');
+    }
+  });
 
-  }
+}
 
 
-  //on or scroll, detect elements in view
-  $(window).on('scroll resize', function() {
-      checkInView();
-    })
-    //trigger our scroll event on initial load
-  $(window).trigger('scroll');
+//on or scroll, detect elements in view
+$(window).on('scroll resize', function() {
+  checkInView();
+})
+//trigger our scroll event on initial load
+$(window).trigger('scroll');
+
+// -----------------------------
+// Form Validation
+// -----------------------------
+$('form').on('submit', function(e){
+  e.preventDefault();
+  $('input, textarea').each(function (){
+    if($(this).val()===""){
+      $(this).attr('placeholder', 'Invalid Input');
+      $(this).addClass("error");
+    }
+  })
+})
