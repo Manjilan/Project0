@@ -1,44 +1,37 @@
 body{
   font-family: Comfortaa;
   font-size: 16px;
-<<<<<<< HEAD
   background-color: #696969;
-=======
->>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
+
 }
 
 h1{
   text-align: center;
-<<<<<<< HEAD
   font-family: "Noto Sans";
   padding: 3% 0;
   color: white;
   background: red;
   text-transform: uppercase;
-=======
   font-family: Quicksand;
   padding: 3% 0;
->>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
+
 }
 main{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-<<<<<<< HEAD
   justify-content: space-evenly;
   text-align: center;
   color: #808080;
-
-=======
+  margin: 0 auto;
   justify-content: space-around;
   text-align: center;
   color: #808080;
->>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
+
 }
 main div{
   padding: 2%;
 }
-<<<<<<< HEAD
 
 img{
   width: 300px;
@@ -77,5 +70,16 @@ p{
   background-color: grey;
 
 }
-=======
->>>>>>> 341cb104ac93c435a040116c449ca29116b74d50
+footer{
+  display: flex;
+  justify-content: center;
+}
+#next{
+  background: #808080;
+  color: white;
+  border-radius: 8px;
+  padding: 20px 100px;
+  font-size: 1rem;
+  margin-top: 25%;
+  text-transform: uppercase;
+}
