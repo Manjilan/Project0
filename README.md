@@ -10,4 +10,4 @@ A Portfolio website that integrates the following technologies:
 - DOM Manipulation on click of buttons
 - Appending html elements on events
 
-![Marvel API Screenshot](https://github.com/Manjilan/Project0/assets/marvel-api.png)
+![Marvel API Screenshot](https://github.com/Manjilan/Project0/master/assets/marvel-api.png)
