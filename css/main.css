@@ -79,7 +79,7 @@ header{
   padding: 400px 0;
 }
 nav{
-  background-color: #E6E2D6;
+  background-color: #C0C0C0;
   color: white;
 }
 h1{
@@ -399,7 +399,6 @@ footer h4{
   font-size: 1em;
   text-align: center;
   padding-bottom: 2%;
-  border-bottom: 2px solid;
 }
 
 footer div{
@@ -443,13 +442,18 @@ Animation
 /* -----------------------------------------------------
 Media Queries
 -------------------------------------------------------- */
-@media (max-width: 860px){
+@media screen (max-width: 660px){
   html {
     font-size: 18px;
   }
 
   .about-paragraphs p{
     width: 100%;
+  }
+
+  .about-paragraphs iframe{
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-links{
@@ -464,11 +468,12 @@ Media Queries
   .hamburger-icon{
     display: inline-block;
   }
+
   .nav-links a{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    display: none;
+    font-size: 8px;
   }
 
   .open-menu {
