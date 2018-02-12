@@ -9,3 +9,5 @@ A Portfolio website that integrates the following technologies:
 - Marvel API integration on the page when you click the first projects
 - DOM Manipulation on click of buttons
 - Appending html elements on events
+
+![Marvel API Screenshot](marvel-api.png)
