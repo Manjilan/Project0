@@ -79,8 +79,8 @@ header{
   padding: 400px 0;
 }
 nav{
-  background-color: #C0C0C0;
-  color: white;
+  background-color: #E6E2D6;
+  color: #8B7583;
 }
 h1{
   color: white;
@@ -136,8 +136,7 @@ nav {
 }
 
 nav a {
-  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
+  font-family: "Comfortaa", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .02em;
@@ -145,8 +144,8 @@ nav a {
   padding: 0 2%;
 }
 
-a:hover {
-  color: #8B7583;
+nav a:hover {
+  color: white;
 }
 
 nav .content-wrapper {
@@ -165,6 +164,7 @@ nav .content-wrapper {
   font-size: .75rem;
   padding: .2em 0;
   border-bottom: 2px solid transparent;
+  color: #8B7583;
 }
 
 .nav-links .current {
