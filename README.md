@@ -12,3 +12,6 @@ A Portfolio website that integrates the following technologies:
 
 
  https://manjilan.github.io/Project0/
+
+API integration
+https://manjilan.github.io/Project0/funpage.html
