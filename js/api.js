@@ -17,12 +17,14 @@ var marvel_endpoint = "https://gateway.marvel.com/v1/public/characters?ts=1&apik
         offset: offset
     },
     success: function(response){
+      //TODO: YESSSSSSSSSSSSSSSS!!!!!!!!!
       $(response.data.results).each(function(){
         var front= `<div class="front"><img src="${this.thumbnail.path}/standard_fantastic.jpg"></div>`;
         var back= `<div class="back"><p>${this.name}<br>${this.description}</p></div>`;
         $("main").append(`<section class="card"> ${front} ${back}</section>`);
        })
     },
+      // TODO: Lol the response argument should also be console logged out for assistance.
       error: function(response){
         console.log('Dang it!');
       },

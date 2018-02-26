@@ -8,6 +8,7 @@ var currentSlideIndex = 0;
 // Find out how many images are in the carousel wrapper
 var numberImages = $('.carousel img').length;
 
+// TODO: Very clever!
 // Set the width of the image wrapper and each image accordingly (responsive, baby!)
 $('.image-wrapper').css('width', numberImages * 100 + '%');
 $('.image-wrapper a').css('width', 100 / numberImages + '%');
