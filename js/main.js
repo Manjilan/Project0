@@ -81,7 +81,7 @@ setInterval(function () {
 // --------------------------
 
 // Do it when someone clicks a nav link
-$('.nav-links a').on('click', function(e) {
+$('.mobile-nav').on('click', function(e) {
   // prevent the standard link operation on click
   e.preventDefault();
   // use the href of the link to identify what
@@ -174,17 +174,10 @@ $(window).scroll( throttle(highlightNavigation, 100) );
 
 $('.hamburger-icon').on('click', function(e){
   e.preventDefault();
-  $(this).toggleClass('open-menu');
-  $('.nav-links').toggle();
+  $('.mobile-nav').toggleClass('open-menu');
+  // $('.mobile-nav').toggle();
 });
-// $(window).on('resize', function(e){
-//   e.preventDefault();
-//   if ($(window).width()>=700){
-//     $('.mobile-nav').hide();
-//   } else{
-//       $('.mobile-nav').show();
-//   }
-// })
+
 
 // -----------------------------
 // Animations

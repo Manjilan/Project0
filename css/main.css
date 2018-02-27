@@ -442,11 +442,11 @@ Animation
    opacity: 1;
    transform: translate3d(0px, 0px, 0px);
 }
-}
+/* } */
 /* -----------------------------------------------------
 Media Queries
 -------------------------------------------------------- */
-@media screen (max-width: 660px){
+@media screen and (max-width: 660px){
   html {
     font-size: 18px;
   }
@@ -455,7 +455,7 @@ Media Queries
     width: 100%;
   }
 
-  .about-paragraphs iframe{
+  .about-paragraphs{
     display: flex;
     flex-direction: column;
   }
@@ -467,8 +467,19 @@ Media Queries
     order: 3;
     width: 100%;
     padding-top: 1rem;
-
   }
+  .mobile-nav{
+      display:none;
+      flex-direction: column;
+  }
+
+  nav{
+    padding-top: 0;
+  }
+  img{
+    width: 100%;
+  }
+
   .hamburger-icon{
     display: inline-block;
   }
@@ -477,7 +488,7 @@ Media Queries
     display: flex;
     flex-direction: column;
     padding: 10px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .open-menu {
