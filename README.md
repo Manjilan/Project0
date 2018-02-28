@@ -15,3 +15,5 @@ A Portfolio website that integrates the following technologies:
 
 API integration
 https://manjilan.github.io/Project0/funpage.html
+
+<img src="https://raw.githubusercontent.com/Manjilan/Project0/master/assets/geoquakes.png">
