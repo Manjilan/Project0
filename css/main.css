@@ -41,6 +41,11 @@ ul {
 #about, #skills, #testimonials, #contact, #portfolio h2{
   opacity: .7;
 }
+button a{
+  text-decoration: none;
+  color: #8B7583;
+  width: 70%;
+}
 /* -----------------------------------------------------
 Typography
 -------------------------------------------------------- */
@@ -340,6 +345,9 @@ blockquote:first-of-type {
 /* -----------------------------------------------------
 Forms
 -------------------------------------------------------- */
+#contact{
+  display: none;
+}
 input, textarea {
   font-size: .75rem;
   width: 100%;
@@ -442,7 +450,61 @@ Animation
    opacity: 1;
    transform: translate3d(0px, 0px, 0px);
 }
-/* } */
+/* -----------------------------------------------------
+Resume
+-------------------------------------------------------- */
+.resume h1{
+  color: #8B7583;
+  text-align: center;
+  padding-top: 15%;
+  padding-bottom: 50px;
+}
+.resume h3{
+  margin-top: 10%;
+  border-top: 2px solid gray;
+  padding: 2%;
+}
+.resume h2{
+  text-transform: lowercase;
+  font-size: 20px;
+}
+.resume h2 a{
+  text-decoration: none;
+  color: #8B7583;
+}
+.resume h3, .resume h4, .resume h5, .resume h6{
+  text-align: left;
+}
+.resume{
+  width: 80%;
+  margin: 0 auto;
+}
+.resume .city{
+  text-transform: capitalize;
+}
+.icons{
+  display: flex;
+  flex-direction: column;
+}
+.icons svg{
+  margin: 0 auto;
+}
+.gallery{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery div{
+  width: 30%;
+  margin: 0 auto;
+}
+.gallery div img{
+  width: 100%;
+}
+.gallery button{
+  width: 45%;
+  margin: 2%;
+}
 /* -----------------------------------------------------
 Media Queries
 -------------------------------------------------------- */

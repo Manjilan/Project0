@@ -16,13 +16,13 @@
     <nav>
       <div class="content-wrapper">
         <span class="nav-links">
-          <a href="" class="hamburger-icon"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+          <a href="" class="hamburger-icon"><i class="fa fa-bars fa-2x" aria-hidden="true" class="hamburger-icon"></i></a>
           <div class="mobile-nav">
-          <a href="#about">About</a>
-          <a href="#portfolio">Projects</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact</a>
-        </div>
+            <a href="#about">About</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact" id="contact-button">Contact</a>
+          </div>
         </span>
       </div>
     </nav>
@@ -33,18 +33,23 @@
     <section id="about">
       <h2>About Me</h2>
       <div class="about-paragraphs animation-items slide-in">
-        <p>International Business graduate venturing into Web Development in the San Francisco Bay Area. Willing to learn new technologies and build on different skills. Would love to collaborate on new projects. Love to travel, ocassionally practice photography and be a foodie. Organized, grounded and a great communicator by nature.</p>
+        <p>Web Developer in the San Francisco Bay Area who loves watching animation in spare time. Willing to learn new technologies and build on different skills. Would love to collaborate on new projects. Love to travel, ocasionally practice photography and be a foodie. Organized, grounded and a great communicator by nature.
+          <br>
+          <br>
+          <button><a href="resume.html">Resume</a></button>
+        </p>
         <img src="assets/giphy.gif">
       </div>
     </section>
     <section id="skills">
       <h2>Skills</h2>
       <div class="animation-items slide-in">
-        <i class="fab fa-html5 fa-3x"></i>
-        <i class="fab fa-css3-alt fa-3x"></i>
-        <i class="fab fa-js fa-3x"></i>
-        <i class="fas fa-code fa-3x"></i>
-        <i class="fab fa-github fa-3x"></i>
+        <div class="icons"><p>HTML</p><i class="fab fa-html5 fa-3x"></i></div>
+        <div class="icons"><p>CSS</p><i class="fab fa-css3-alt fa-3x"></i></div>
+        <div class="icons"><p>JavaScript</p><i class="fab fa-js fa-3x"></i></div>
+        <div class="icons"><p>Nodejs</p><i class="fab fa-node fa-3x"></i></div>
+        <div class="icons"><p>Github</p><i class="fab fa-github fa-3x"></i></div>
+        <div class="icons"><p>React</p><i class="fab fa-react fa-3x"></i></div>
       </div>
     </section>
 
@@ -52,24 +57,22 @@
       <h2>Projects</h2>
       <!-- icon row for skills -->
       <!-- //carousel goes here -->
-      <div class="content-wrapper">
-        <div class="carousel">
-          <div class="image-wrapper">
-            <a href="https://manjilan.github.io/Project0/funpage.html"><img src="assets/marvel-api.png" alt=""></a>
-            <a href="https://github.com/Manjilan/Homework-1"><img src="assets/monument.png" alt=""></a>
-            <a href="https://github.com/Manjilan/geoquakes"><img src="assets/geoquakes.png" alt=""></a>
-            <a href="https://github.com/Manjilan/Supermarket"><img src="assets/shoppingcart.png" alt=""></a>
-            <a href="https://fast-brook-23117.herokuapp.com/"><img src="assets/aventyr.png" alt=""></a>
-          </div>
-
+      <div class="gallery">
+        <div>
+          <img src="assets/project2.png">
+          <a href="https://github.com/Manjilan/aventyr"><button>Github</button></a>
+          <a href="https://fast-brook-23117.herokuapp.com"><button>Website</button></a>
         </div>
-        <ul class="carousel-indicators">
-          <li data-slide-number="0" class="active"></li>
-          <li data-slide-number="1"></li>
-          <li data-slide-number="2"></li>
-          <li data-slide-number="3"></li>
-          <li data-slide-number="4"></li>
-        </ul>
+        <div>
+          <img src="assets/project3.png">
+          <a href="https://github.com/Manjilan/dreamcatcher"><button>Github</button></a>
+          <a href="https://boiling-plateau-19780.herokuapp.com/"><button>Website</button></a>
+        </div>
+        <!-- <div>
+          <img src="assets/project1.png">
+          <a href="https://github.com/Manjilan/aventyr"><button>Github</button></a>
+          <a href="https://github.com/Manjilan/aventyr"><button>Website</button></a>
+        </div> -->
       </div>
     </section>
 
@@ -91,7 +94,7 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <!-- form to contact me -->
-    <form>
+    <form action="mailto: manjila@manjilanakarmi.com" method="POST">
       <label for="fullName">Name</label>
       <input type= "text" id ="fullName" placeholder="Full Name">
       <label for="emailAddress">Email Address</label>

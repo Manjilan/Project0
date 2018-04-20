@@ -1,4 +1,12 @@
-
+$('.hamburger-icon').on('click', function(){
+  $('.mobile-nav').slideToggle();
+})
+$('#contact-button').on('click', function(){
+  $('#contact').slideToggle();
+})
+if($(window).width()>750){
+  $('.mobile-nav').show();
+}
 // --------------------------
 // Carousel -----------------
 // --------------------------
@@ -82,7 +90,7 @@ setInterval(function () {
 // --------------------------
 
 // Do it when someone clicks a nav link
-$('.mobile-nav').on('click', function(e) {
+$('.nav-links a').on('click', function(e) {
   // prevent the standard link operation on click
   e.preventDefault();
   // use the href of the link to identify what
@@ -221,16 +229,3 @@ $(window).on('scroll resize', function() {
 })
 //trigger our scroll event on initial load
 $(window).trigger('scroll');
-
-// -----------------------------
-// Form Validation
-// -----------------------------
-$('form').on('submit', function(e){
-  e.preventDefault();
-  $('input, textarea').each(function (){
-    if($(this).val()===""){
-      $(this).attr('placeholder', 'Invalid Input');
-      $(this).addClass("error");
-    }
-  })
-})
