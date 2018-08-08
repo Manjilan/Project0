@@ -347,52 +347,14 @@ Forms
 -------------------------------------------------------- */
 #contact{
   display: none;
-}
-input, textarea {
-  font-size: .75rem;
-  width: 100%;
-  padding: 10px 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: .9rem;
-  outline: none;
+  text-align: center;
+  width: 70%;
 }
 
-label {
-  margin-bottom: .4rem;
-  display: block;
-  font-size: .75rem;
-  font-weight: 700;
+#contact a{
+  color: #696969;
 }
 
-textarea {
-  height: 100px;
-}
-
-button {
-  background-color: #18BC9C;
-  padding: 12px 20px;
-  border: 0;
-  border-radius: 4px;
-  font-size: .75rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: .04rem;
-  font-weight: 700;
-}
-
-#contact{
-    width: 70%;
-}
-textarea:hover{
-  border: 2px solid #A9A9A9;
-}
-input:hover{
-  border: 2px solid #A9A9A9;
-}
-.error{
-    border: 2px solid red;
-}
 
 /* -----------------------------------------------------
 Footer
@@ -430,6 +392,8 @@ button{
   width: 100%;
   background-color: #E6E2D6;
   color: #696969;
+  padding: 0.5rem;
+  font-size: 0.8rem;
 }
 h4{
   text-align: center;
@@ -544,7 +508,6 @@ Media Queries
     width: 60%;
   }
 
-
   .hamburger-icon{
     display: inline-block;
   }
@@ -562,20 +525,26 @@ Media Queries
     transition: max-height 0.25s ease-in;
   }
 
-.open-menu a{
-    display: inline-block;
-    align-self: flex-start;
-    margin-left: 0;
-    font-size: .8rem;
-    padding: .25rem 0;
-}
-#testimonials p{
-  width: 80%;
-}
-#testimonials div {
-  width: 90%;
-}
-footer div{
-  width: 80%;
-}
+  .open-menu a{
+      display: inline-block;
+      align-self: flex-start;
+      margin-left: 0;
+      font-size: .8rem;
+      padding: .25rem 0;
+  }
+  #testimonials p{
+    width: 80%;
+  }
+  #testimonials div {
+    width: 90%;
+  }
+  footer div, .gallery button, .gallery div{
+    width: 90%;
+  }
+  .gallery{
+    flex-direction: column;
+  }
+  .gallery div{
+      margin: 1rem;
+  }
 }
