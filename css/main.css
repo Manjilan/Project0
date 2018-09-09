@@ -414,6 +414,26 @@ Animation
    opacity: 1;
    transform: translate3d(0px, 0px, 0px);
 }
+#overlay{
+  position:fixed;
+  z-index:200;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgb(255,255,255);
+  transition: 1s 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#overlay img{
+  width: 10%;
+}
+.loaded{
+  display:none;
+}
 /* -----------------------------------------------------
 Resume
 -------------------------------------------------------- */
