@@ -1,11 +1,11 @@
-$(document).ready(function(){
-   // PAGE IS FULLY LOADED
-   // FADE OUT YOUR OVERLAYING DIV
-   $(".loaded").fadeIn(1500);
-   $('#overlay').fadeOut(3500, function(){
-     $('#overlay').hide();
-   });
-});
+// $(document).ready(function(){
+//    // PAGE IS FULLY LOADED
+//    // FADE OUT YOUR OVERLAYING DIV
+//    $(".loaded").fadeIn(1500);
+//    $('#overlay').fadeOut(3500, function(){
+//      $('#overlay').hide();
+//    });
+// });
 
 $('.hamburger-icon').on('click', function(){
   $('.mobile-nav').slideToggle();
