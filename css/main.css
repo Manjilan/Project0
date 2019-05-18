@@ -13,7 +13,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  color: #696969;
+  color: white;
 }
 
 .image-wrapper img{
@@ -36,14 +36,14 @@ ul {
 
 }
 #about{
-  background-color: #FAF4D7;
+  background: linear-gradient(#824EF6, #7CABC5);
 }
 #about, #skills, #testimonials, #contact, #portfolio h2{
   opacity: .7;
 }
 button a{
   text-decoration: none;
-  color: #8B7583;
+  color: white;
   width: 70%;
 }
 /* -----------------------------------------------------
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 Theme
 -------------------------------------------------------- */
 .fixed-background {
-    background: url('../assets/415109.jpg');
+    background: url('../assets/colors-min.jpg');
     width: 100%;
     height: auto;
     display:block;
@@ -87,15 +87,14 @@ header{
   padding: 400px 0;
 }
 nav{
-  background-color: #E6E2D6;
-  color: #8B7583;
+  background-color: rgba(255,255,255,0.33);
 }
 h1{
   color: white;
   padding: 50px 0 200px;
 }
 #skills{
-  background-color: #E6E2D6;
+  background: linear-gradient(#7CABC5, #FFFFFF);
 }
 
 
@@ -172,7 +171,7 @@ nav .content-wrapper {
   font-size: .75rem;
   padding: .2em 0;
   border-bottom: 2px solid transparent;
-  color: #8B7583;
+  color: white;
 }
 
 .nav-links .current {
@@ -241,7 +240,6 @@ Sections
 section {
   padding: 3rem 0;
   margin: 0 auto;
-  color: #444;
 }
 
 section hr {
@@ -256,8 +254,8 @@ h2 {
   justify-content: space-around;
   padding: 2% 0;
 }
-#skills i{
-  color: #E6E2D6;
+#skills svg, #skills p, #skills h2{
+  color: #824EF6;
 }
 
 /* -----------------------------------------------------
@@ -267,14 +265,15 @@ About
   column-count: 2;
 
 }
-
 .about-content p {
   margin-top: 0;
 }
-#skills i{
-  color: black;
+/* -----------------------------------------------------
+Portfolio
+-------------------------------------------------------- */
+#portfolio{
+  background: linear-gradient(#FFFFFF, #A6D1E0);
 }
-
 /* -----------------------------------------------------
 Projects
 -------------------------------------------------------- */
@@ -312,8 +311,9 @@ Projects
   background-color: #2C3E50;
   border: 2px solid #2C3E50;
 }
-#portfolio h2{
+#portfolio h2, #portfolio p{
   text-align: center;
+  color: #7CABC5;
 }
 
 /* -----------------------------------------------------
@@ -329,7 +329,7 @@ blockquote:first-of-type {
   display: block;
 }
 #testimonials{
-  background-color: #E0E0E2;
+  background: linear-gradient(#7DBED2, #A789F6);
   padding: 10% 0;
 }
 #testimonials div{
@@ -346,7 +346,6 @@ blockquote:first-of-type {
 Forms
 -------------------------------------------------------- */
 #contact{
-  display: none;
   text-align: center;
   width: 70%;
 }
@@ -363,7 +362,7 @@ footer{
   overflow: hidden;
   margin: 3rem auto 0;
   padding: 1rem 0 ;
-  background-color: #E6E2D6;
+  background-color: #A88BF5;
   color: #696969;
   opacity: 0.7;
 }
@@ -390,8 +389,8 @@ footer a:hover{
 }
 button{
   width: 100%;
-  background-color: #E6E2D6;
-  color: #696969;
+  background-color: #BC3578;
+  color: white;
   padding: 0.5rem;
   font-size: 0.8rem;
 }
@@ -466,6 +465,10 @@ Resume
 .resume .city{
   text-transform: capitalize;
 }
+.resume{
+  color: #8B7583;
+  padding: 2%;
+}
 .icons{
   display: flex;
   flex-direction: column;
@@ -477,10 +480,11 @@ Resume
   display: flex;
   width: 90%;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .gallery div{
-  width: 30%;
-  margin: 0 auto;
+  width: 40%;
+  margin: 2% auto;
 }
 .gallery div img{
   width: 100%;

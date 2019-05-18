@@ -10,9 +10,6 @@
 $('.hamburger-icon').on('click', function(){
   $('.mobile-nav').slideToggle();
 })
-$('#contact-button').on('click', function(){
-  $('#contact').slideToggle();
-})
 if($(window).width()>750){
   $('.mobile-nav').show();
 }
