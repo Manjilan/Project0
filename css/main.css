@@ -87,7 +87,7 @@ header{
   padding: 400px 0;
 }
 nav{
-  background-color: rgba(255,255,255,0.33);
+  background-color: rgba(255,255,255,1);
 }
 h1{
   color: white;
@@ -152,7 +152,7 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
+  color: #969696;
 }
 
 nav .content-wrapper {
@@ -171,7 +171,7 @@ nav .content-wrapper {
   font-size: .75rem;
   padding: .2em 0;
   border-bottom: 2px solid transparent;
-  color: white;
+  color: #969696;
 }
 
 .nav-links .current {
@@ -323,6 +323,7 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   display: none;
+  height: 250px;
 }
 
 blockquote:first-of-type {
@@ -353,8 +354,9 @@ Forms
 #contact a{
   color: #696969;
 }
-
-
+#contact h2{
+  color: #969696;
+}
 /* -----------------------------------------------------
 Footer
 -------------------------------------------------------- */
